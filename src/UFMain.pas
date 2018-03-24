@@ -10,7 +10,7 @@ type
   TFLightDetection = class(TForm)
     ImgOrigin : TImage;
     ImgProcessed : TImage;
-    BProcessImage: TButton;
+    BProcessImage : TButton;
     OpenPictureDialog1 : TOpenPictureDialog;
     procedure BProcessImageClick(Sender : TObject);
     procedure FormCanResize(Sender : TObject; var NewWidth, NewHeight : Integer; var Resize : Boolean);
@@ -58,8 +58,8 @@ begin
     j := 1;
     while j + 2 * tN < Img.Width do
     begin
-      for k := 1 to tN do
-        for l := 1 to tN do
+      for k := 0 to tN do
+        for l := 0 to tN do
           ti.Pixels[k, l] := gs.Pixels[i + k, j + l];
       hist := ti.HistogramVal;
       sall := 0;
